@@ -2,13 +2,13 @@
 {% block title %}Home{% endblock %}
 {% block body %}
 <h1>Home page</h1>
-{% for post in posts %}
 <div class="container card">
     <h4>Title:</h4>{{ post.title }}<br>
     <h5>Intro:</h5>{{ post.intro }}<br>
     <h5>Date:</h5>{{ post.date }}<br>
-    <a href="/post/{{ post.id }}">Детальнее</a>
+    <h6>Text:</h6>{{ post.text }}
+    <a href="/post/{{ post.id }}/del" class="btn btn-danger">Удалить</a>
+    <a href="/post/{{ post.id }}/update" class="btn btn-info">Редактировать</a>
 </div>
 <br>
-{% endfor %}
 {% endblock %}
